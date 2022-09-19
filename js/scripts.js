@@ -87,7 +87,7 @@ subcontainer_home.appendChild(home_content);
 home_container.appendChild(subcontainer_home);
 
 //Serviço
-//Feddback
+//Feedback
 //Contatos
 mainContainer.appendChild(navbar);
 mainContainer.appendChild(home_container);
