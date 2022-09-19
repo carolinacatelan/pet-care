@@ -22,7 +22,17 @@ body {
 
 a {
     text-decoration: none;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 750;
 }
+
+/* #body-container {
+    background-image: url(../img/paw.png);
+    height: 100px;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+} */
 
 li {
     list-style: none;
