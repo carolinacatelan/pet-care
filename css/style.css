@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 0;
+    /* margin: 0; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
         "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
@@ -26,13 +26,9 @@ a {
     font-size: 1rem;
     font-weight: 750;
 }
-
-/* #body-container {
-    background-image: url(../img/paw.png);
-    height: 100px;
-    background-position: 50%, 50%;
-    background-repeat: no-repeat;
-} */
+a.dark {
+    color: #fafafa;
+}
 
 li {
     list-style: none;
@@ -53,6 +49,7 @@ body.dark {
 }
 
 .label {
+    border: 1px solid black;
     width: 50px;
     height: 26px;
     background-color: #111;
@@ -86,6 +83,8 @@ body.dark {
 
 .fa-sun {
     color: yellow;
+
+    display: flex;
 }
 
 .navbar {
@@ -95,7 +94,10 @@ body.dark {
     padding: 20px;
     background: #292c35;
     position: fixed;
-    z-index: 2;
+    top: 0;
+    left: 0;
+
+    /* z-index: 2; */
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
@@ -129,12 +131,17 @@ body.dark {
     height: 1044px;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 88px;
+
     /* background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
     width: 100%;
     height: 700px; */
 }
+
 @media only screen and (max-width: 767px) {
     #home-container {
         background-image: url("../img/home.jpg");

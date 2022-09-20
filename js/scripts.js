@@ -11,8 +11,11 @@ navbar.setAttribute("class", "navbar");
 const navbar_brand = document.createElement("a");
 navbar_brand.setAttribute("href", "#");
 navbar_brand.setAttribute("class", "logo");
-navbar_brand.innerHTML = "PetCare";
-
+navbar_brand.style.display = "flex";
+navbar_brand.innerHTML = `
+<img style="width: 50px; margin-right: 10px"  src="../img/paw.png" /> 
+PetCare
+`;
 const navbar_list = document.createElement("ul");
 navbar_list.setAttribute("class", "nav-links");
 
@@ -49,9 +52,15 @@ darkmode_label.setAttribute("class", "label");
 
 const darkmode_moon = document.createElement("i");
 darkmode_moon.setAttribute("class", "fas fa-moon");
+darkmode_moon.innerHTML = `
+<img style="width: 18px; "  src="../img/moon.png" />
+`;
 
 const darkmode_sun = document.createElement("i");
 darkmode_sun.setAttribute("class", "fas fa-sun");
+darkmode_sun.innerHTML = `
+<img style="width: 30px; "  src="../img/sun.png" />
+`;
 
 const darkmode_selector = document.createElement("div");
 darkmode_selector.setAttribute("class", "selector");
@@ -80,7 +89,7 @@ const subcontainer_home = document.createElement("div");
 subcontainer_home.setAttribute("class", "container");
 
 const home_content = document.createElement("h1");
-home_container.innerHTML =
+home_container.innerText =
     "Cuidados de alta qualidade para animais de estimação que você vai adorar";
 
 subcontainer_home.appendChild(home_content);
@@ -95,7 +104,10 @@ mainContainer.appendChild(home_container);
 //darkmode
 const checkbox = document.getElementById("checkbox");
 
+let logo = document.querySelector(".logo");
+
 checkbox.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     navbar.classList.toggle("dark");
+    logo.classList.toggle("dark");
 });
