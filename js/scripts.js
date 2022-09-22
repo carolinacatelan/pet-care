@@ -59,7 +59,7 @@ darkmode_moon.innerHTML = `
 const darkmode_sun = document.createElement("i");
 darkmode_sun.setAttribute("class", "fas fa-sun");
 darkmode_sun.innerHTML = `
-<img style="width: 30px; "  src="../img/sun.png" />
+<img style="width: 28px; "  src="../img/sun.png" />
 `;
 
 const darkmode_selector = document.createElement("div");
@@ -89,6 +89,7 @@ const subcontainer_home = document.createElement("div");
 subcontainer_home.setAttribute("class", "container");
 
 const home_content = document.createElement("h1");
+home_container.setAttribute("class", "home-text");
 home_container.innerText =
     "Cuidados de alta qualidade para animais de estimação que você vai adorar";
 
