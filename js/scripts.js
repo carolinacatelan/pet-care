@@ -16,31 +16,43 @@ navbar_brand.innerHTML = `
 <img style="width: 50px; margin-right: 10px"  src="../img/paw.png" /> 
 PetCare
 `;
-const navbar_list = document.createElement("ul");
+const navbar_list = document.createElement("div");
 navbar_list.setAttribute("class", "nav-links");
 
 const navbar_menu = document.createElement("div");
 navbar_menu.setAttribute("class", "menu");
 
-const navbar_home = document.createElement("li");
+const navbar_home = document.createElement("a");
 const home_href = document.createElement("a");
 home_href.setAttribute("href", "#home-container");
+navbar_home.onclick = () => applySelectedStyle(navbar_home);
+
 navbar_home.appendChild(home_href);
 navbar_home.innerHTML = "Home";
 
-const navbar_services = document.createElement("li");
+function applySelectedStyle(element) {
+    navbar_home.classList.remove("selected");
+    navbar_services.classList.remove("selected");
+    navbar_feedbacks.classList.remove("selected");
+    element.classList.toggle("selected");
+}
+
+const navbar_services = document.createElement("a");
 const services_href = document.createElement("a");
 services_href.setAttribute("href", "services-container");
+navbar_services.onclick = () => applySelectedStyle(navbar_services);
 navbar_services.appendChild(services_href);
 navbar_services.innerHTML = "Serviços";
 
-const navbar_feedbacks = document.createElement("li");
+const navbar_feedbacks = document.createElement("a");
 const feedbacks_href = document.createElement("a");
 feedbacks_href.setAttribute("href", "feedbacks-container");
+navbar_feedbacks.onclick = () => applySelectedStyle(navbar_feedbacks);
+
 navbar_feedbacks.appendChild(feedbacks_href);
 navbar_feedbacks.innerHTML = "Feedbacks";
 
-const navbar_darkmode = document.createElement("li");
+const navbar_darkmode = document.createElement("span");
 const darkmode_input = document.createElement("input");
 darkmode_input.setAttribute("type", "checkbox");
 darkmode_input.setAttribute("class", "checkbox");
@@ -88,15 +100,20 @@ home_container.setAttribute("id", "home-container");
 const subcontainer_home = document.createElement("div");
 subcontainer_home.setAttribute("class", "container");
 
+subcontainer_home.innerText =
+    "Cuidados de alta qualidade para animais de estimação que você vai adorar";
+
 const home_content = document.createElement("h1");
 home_container.setAttribute("class", "home-text");
-home_container.innerText =
-    "Cuidados de alta qualidade para animais de estimação que você vai adorar";
 
 subcontainer_home.appendChild(home_content);
 home_container.appendChild(subcontainer_home);
 
 //Serviço
+const teste = document.createElement("div");
+teste.innerText = "teste";
+
+document.body.appendChild(teste);
 //Feedback
 //Contatos
 mainContainer.appendChild(navbar);
@@ -107,8 +124,17 @@ const checkbox = document.getElementById("checkbox");
 
 let logo = document.querySelector(".logo");
 
+const menu = document.querySelector(".menu");
+
 checkbox.addEventListener("change", () => {
     document.body.classList.toggle("dark");
     navbar.classList.toggle("dark");
+
+    navbar_menu.classList.toggle("dark");
+
+    for (let tag of menu.children) {
+        if (tag.tagName.toLowerCase() === "a") tag.classList.toggle("dark");
+    }
+
     logo.classList.toggle("dark");
 });

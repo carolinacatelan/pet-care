@@ -18,13 +18,15 @@ body {
 }
 
 a {
+    
     text-decoration: none;
     color: #212529;
     font-size: 1rem;
     font-weight: 750;
 }
+
 a.dark {
-    color: #fafafa;
+    color: #fff;
 }
 
 li {
@@ -94,12 +96,19 @@ body.dark {
     font-weight: 650;
 }
 
-.nav-links ul li div {
-    text-decoration: none;
+.nav-links .menu li {
+    cursor: pointer;
+    position: relative;
 }
 
-.nav-links a {
-    color: #fff;
+.nav-links .menu li .selected ::after {
+    content: "";
+    background-color: #111;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 .logo {
@@ -108,8 +117,39 @@ body.dark {
 
 .menu {
     display: flex;
-    gap: 1em;
+    align-items: center;
+}
+
+.menu a.dark {
+    color: #fafafa;
+}
+
+.menu a {
+    display: inline-block;
+    color: black;
     font-size: 18px;
+    position: relative;
+    padding: 0 12px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.menu a.selected::after {
+    content: "";
+    background-color:#f4ccccff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+.menu a + a {
+    margin-left: 16px;
+}
+
+.menu a:nth-child(3) {
+    margin-right: 25px;
 }
 
 .menu li {
@@ -117,7 +157,7 @@ body.dark {
 }
 
 #home-container {
-    background-image: url("../img/home.jpg");
+    background-image: url("../img/bg_2.jpg");
     height: 1044px;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
@@ -126,9 +166,18 @@ body.dark {
     padding-top: 88px;
 }
 
-@media only screen and (max-width: 767px) {
-    #home-container {
-        background-image: url("../img/home.jpg");
-    }
+.container {
+    font-size: 42px;
+    color: #ffffff; 
+    height: calc(100vh - 88px);
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
 }
 
+@media only screen and (max-width: 767px) {
+    #home-container {
+        background-image: url("../img/bg_2.jpg");
+    }
+}
