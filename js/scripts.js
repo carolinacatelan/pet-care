@@ -13,7 +13,7 @@ navbar_brand.setAttribute("href", "#");
 navbar_brand.setAttribute("class", "logo");
 navbar_brand.style.display = "flex";
 navbar_brand.innerHTML = `
-<img style="width: 50px; margin-right: 10px"  src="./img/paw.png" /> 
+<img style="width: 50px; margin-right: 10px"  src="img/paw.png" /> 
 PetCare
 `;
 const navbar_list = document.createElement("div");
@@ -50,13 +50,13 @@ darkmode_label.setAttribute("class", "label");
 const darkmode_moon = document.createElement("i");
 darkmode_moon.setAttribute("class", "fas fa-moon");
 darkmode_moon.innerHTML = `
-<img style="width: 18px; "  src="./img/moon.png" />
+<img style="width: 18px; "  src="img/moon.png" />
 `;
 
 const darkmode_sun = document.createElement("i");
 darkmode_sun.setAttribute("class", "fas fa-sun");
 darkmode_sun.innerHTML = `
-<img style="width: 28px; "  src="./img/sun.png" />
+<img style="width: 28px; "  src="img/sun.png" />
 `;
 
 const darkmode_selector = document.createElement("div");
