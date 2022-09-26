@@ -166,7 +166,6 @@ body.dark {
 }
 
 #home-container {
-    background-image: url("../img/home.jpg");
     height: 1044px;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
@@ -364,7 +363,6 @@ body.dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/feedback.jpg");
     height: 1044px;
     background-position: 50%, 50%;
     background-repeat: no-repeat;

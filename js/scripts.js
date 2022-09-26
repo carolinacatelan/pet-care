@@ -88,6 +88,7 @@ navbar.appendChild(navbar_list);
 //Home
 const home_container = document.createElement("div");
 home_container.setAttribute("id", "home-container");
+home_container.setAttribute("style", "background-image: url('./img/home.jpg');");
 
 const subcontainer_home = document.createElement("div");
 subcontainer_home.setAttribute("class", "container");
@@ -155,6 +156,7 @@ service_container.innerHTML = `
 //feedbacks
 const feedback_container = document.createElement("div");
 feedback_container.setAttribute("id", "feedback-container");
+feedback_container.setAttribute("style", "background-image: url('./img/feedback.jpg');");
 
 const Http = new XMLHttpRequest();
 const url = "https://randomuser.me/api/?results=3";
@@ -166,11 +168,6 @@ Http.onreadystatechange = (e) => {
 
     feedback_container.innerHTML = `
     <div class = "container"> 
-        <div class = "title-row">
-            <div class = "title-col">
-                <h2>Feedbacks</h2>
-            </div>
-        </div>
         <div class = "row">
             <div class = "col">
                 <div class = "col-text">
