@@ -95,10 +95,6 @@ subcontainer_home.setAttribute("class", "container");
 subcontainer_home.innerText =
     "Cuidados de alta qualidade para animais de estimação que você vai adorar";
 
-const home_content = document.createElement("h1");
-home_container.setAttribute("class", "home-text");
-
-subcontainer_home.appendChild(home_content);
 home_container.appendChild(subcontainer_home);
 
 //Service
@@ -111,7 +107,7 @@ service_container.innerHTML = `
         <div class = "col">
             <div class = "col-text">
                 <div class = "icon">
-                    <span><img style="width: 42px; "  src="../img/vet.png" /></span>
+                    <span><img style="width: 42px; "  src="./img/vet.png" /></span>
                 </div>
                 <div class = "media-body">
                     <h3 class="heading">Veterinário(a)</h3>
@@ -126,7 +122,7 @@ service_container.innerHTML = `
             <div class = "col">
             <div class = "col-text">
                 <div class = "icon">
-                    <span><img style="width: 42px; "  src="../img/bathAndGroom.png" /></span>
+                    <span><img style="width: 42px; "  src="./img/bathAndGroom.png" /></span>
                 </div>
                 <div class = "media-body">
                     <h3 class="heading">Banho e tosa</h3>
@@ -140,7 +136,7 @@ service_container.innerHTML = `
             <div class = "col">
             <div class = "col-text">
                 <div class = "icon">
-                    <span><img style="width: 42px; "  src="../img/hotelAnimal.png" /></span>
+                    <span><img style="width: 42px; "  src="./img/hotelAnimal.png" /></span>
                 </div>
                 <div class = "media-body">
                     <h3 class="heading">Hotel para animais</h3>
@@ -179,7 +175,7 @@ Http.onreadystatechange = (e) => {
             <div class = "col">
                 <div class = "col-text">
                     <div class = "icon">
-                        <span><img style="width: 22px; "  src="../img/quote.png" /></span>
+                        <span><img style="width: 22px; "  src="./img/quote.png" /></span>
                     </div>
                     <div class = "media-body">
                         <p>
@@ -207,7 +203,7 @@ Http.onreadystatechange = (e) => {
             <div class = "col">
                 <div class = "col-text">
                     <div class = "icon">
-                        <span><img style="width: 22px; "  src="../img/quote.png" /></span>
+                        <span><img style="width: 22px; "  src="./img/quote.png" /></span>
                     </div>
                     <div class = "media-body">
                         <p>
@@ -234,7 +230,7 @@ Http.onreadystatechange = (e) => {
             <div class = "col">
                     <div class = "col-text">
                         <div class = "icon">
-                            <span><img style="width: 22px; "  src="../img/quote.png" /></span>
+                            <span><img style="width: 22px; "  src="./img/quote.png" /></span>
                         </div>
                         <div class = "media-body">
                             <p>
@@ -270,7 +266,7 @@ const btn_top = document.createElement("button");
 btn_top.setAttribute("class", "btn-fixed");
 
 btn_top.innerHTML = `
-    <div><img style="width: 32px;"  src="../img/arrow.png" /></div>
+    <div><img style="width: 32px;"  src="./img/arrow.png" /></div>
 `;
 
 window.addEventListener("scroll", function (event) {
